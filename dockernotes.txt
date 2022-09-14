@@ -1,0 +1,1000 @@
+    7  cat /etc/haproxy/haproxy.cfg 
+    8  vi /etc/haproxy/haproxy.cfg 
+    9  clear
+   10  systemctl stop haproxy 
+   11  clear
+   12  systemctl status haproxy
+   13  cd /etc/docker/
+   14  ll
+   15  vi daemon.json
+   16  cat daemon.json 
+   17  cd /etc/systemd/system
+   18  mkdir docker.service.d
+   19  cd ..
+   20  cd
+   21  systemctl daemon-reload
+   22  systemctl restart docker
+   23  systemctl enable docker
+   24  docker version
+   25  cat /etc/yum.repos.d/
+   26  cd /etc/yum.repos.d/
+   27  ll
+   28  vi kubernetes.repo
+   29  cat CentOS-Base.repo 
+   30  senenforce 0 
+   31  setenforce 0 
+   32  yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+   33  yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes 
+   34  vi kubernetes.repo
+   35  yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes 
+   36  vi kubernetes.repo 
+   37  yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes 
+   38  vi kubernetes.repo 
+   39  clear
+   40  vi kubernetes.repo 
+   41  ping k8sworker1.vsys.net 
+   42  ping k8sworker2.vsys.net 
+   43  yum repolist
+   44  yum clean all 
+   45  yum repolist
+   46  ll
+   47  vi CentOS-Base.repo 
+   48  yum repolist
+   49  ll
+   50  cd base/
+   51  ll
+   52  cd Packages/
+   53  ll
+   54  cd ../../
+   55  ll
+   56  rm kubernetes.repo 
+   57  yum repolist
+   58  ip
+   59  hostname
+   60  ll
+   61  rm Cent* 
+   62  ll
+   63  yum repolist
+   64  yum clean all
+   65  yum repolist
+   66  ll
+   67  yum reinstall centos-release
+   68  yum repolist
+   69  ll
+   70  yum repolist
+   71  yum reinstall centos-release
+   72  yum clean all
+   73  yum reinstall centos-release
+   74  ll
+   75  mkdir bkp 
+   76  mv Cent* bkp/ 
+   77  ll
+   78  mv *.repo bkp/
+   79  ll
+   80  yum clean all repolist
+   81  yum clean all 
+   82  yum reinstall centos-release
+   83  yum repolist all
+   84  yum repolist
+   85  ll
+   86  yum repolist
+   87  yum clean all
+   88  yum repolist
+   89  yum reinstall centos-release
+   90  rpm -iv http://vault.centos.org/8.0.1905/BaseOS/x86_64/os/Packages/centos-release-8.0-0.1905.0.9.el8.x86_64.rpm 
+   91  yum repolist
+   92  yum clean all
+   93  yum repolist
+   94  rpm -iv http://vault.centos.org/8.0.1905/BaseOS/x86_64/os/Packages/centos-release-8.0-0.1905.0.9.el8.x86_64.rpm 
+   95  yum clean all
+   96  rpm -iv http://vault.centos.org/8.0.1905/BaseOS/x86_64/os/Packages/centos-release-8.0-0.1905.0.9.el8.x86_64.rpm 
+   97  yum clean all
+   98  rpm -iv http://vault.centos.org/8.0.1905/BaseOS/x86_64/os/Packages/centos-release-8.0-0.1905.0.9.el8.x86_64.rpm 
+   99  yum repolist
+  100  clear
+  101  yum repolist
+  102  rpm -iv http://vault.centos.org/8.0.1905/BaseOS/x86_64/os/Packages/centos-release-8.0-0.1905.0.9.el8.x86_64.rpm
+  103  yum repolist
+  104  docker version
+  105  kuberadmin init
+  106  systemctl status kubeadmin
+  107  systemctl status kubeadm
+  108  clear
+  109  sysctl --system
+  110  cd /etc/yum.repos.d/
+  111  ll
+  112  cat kubernetes.repo 
+  113  yum install kubeadm docker -y 
+  114  systemctl enable kubelet
+  115  systemctl start kubelet
+  116  systemctl enable docker
+  117  yum install kubeadm docker -y 
+  118  systemctl enable docker
+  119  systemctl start docker
+  120  clear
+  121  kubeadm init
+  122  ls -l /etc/containerd/config.toml
+  123  rm /etc/containerd/config.toml
+  124  systemctl restart containerd
+  125  kubeadm init
+  126  which containerd
+  127  export KUBECONFIG=/etc/kubernetes/admin.conf
+  128  echo $KUBE
+  129  mkdir -p $HOME/.kube
+  130  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  131  cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  132  chown $(id -u):$(id -g) $HOME/.kube/config
+  133  kubectl get nodes
+  134  date
+  135  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
+  136  export kubever=$(kubectl version | base64 | tr -d '\n')
+  137  kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
+  138  export kubever=$(kubectl version | base64 | tr -d '\n')
+  139  kubectl get nodes
+  140  export kubever=$(kubectl version | base64 | tr -d '\n')
+  141  kubectl version --short
+  142  kubectl get nodes
+  143  systemctl status kubectl
+  144  systemctl status kubeadm
+  145  systemctl start kubeadm
+  146  systemctl status kube*
+  147  systemctl status kubernetes
+  148  systemctl start kube*
+  149  systemctl status kubernetes
+  150  systemctl status docker
+  151  clear
+  152  free -m
+  153  systemctl status firewalld
+  154  swapoff -a
+  155  iptables -L
+  156  iptables -F
+  157  kubectl get nodes
+  158  clear
+  159  yum history 
+  160  yum history undo 1 
+  161  yum history
+  162  yum history list
+  163  date
+  164  yum history last 
+  165  yum history info 1
+  166  init 0
+  167  date
+  168  echo $?
+  169  date +%Y
+  170  date +%M
+  171  date +%m
+  172  date +%d
+  173  date +%D
+  174  date +%y
+  175  date +%Y
+  176  date +%M
+  177  date +%m
+  178  date +%d
+  179  date +%D
+  180  init 0 
+  181  echo $0
+  182  echo $!
+  183  echo $1
+  184  echo $0
+  185  ll
+  186  echo $?
+  187  lll
+  188  echo $?
+  189  llls
+  190  l
+  191  echo $?
+  192  hj
+  193  echo $?
+  194  wget https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbktFdS00Rnd6Wk1rR0YtenZ1eGxJaTRwU0RMZ3xBQ3Jtc0tuUGR3aEVsNUd0RnZDS0YweFJUYXhjUHZpQ0tRZnFldXEtMW5mTnJRblRFb194SlFVM1pVRVA2RUlFZ3NpNE11SW9MSWdjRHgtQXFJamoyMmpfZ2VhaWhLaC1PT2hjQWdhajdub3Q4QXJfcDd0eFJZQQ&q=https%3A%2F%2Fdl.fedoraproject.org%2Fpub%2Fepel%2F7%2Fx86_64%2FPackages%2Fe%2Fepel-release-7-12.noarch.rpm&v=FX3hqQdsE9k 
+  195  wget https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-12.noarch.rpm
+  196  clear
+  197  cat /etc/redhat-release 
+  198  yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm 
+  199  rpm -ivh epel-release-7-12.noarch.rpm 
+  200  yum --enablerepo=epel install ansible 
+  201  ansible --version
+  202  yum repolist 
+  203  cat /etc/hosts
+  204  ssh k8sworker1.vsys.net
+  205  ssh k8sworker2.vsys.net
+  206  ssh k8sworker3.vsys.net
+  207  cd /etc/ansible/
+  208  ll
+  209  cat hosts 
+  210  vi hosts 
+  211  cat hosts 
+  212  ping ansnode1
+  213  ansible -m ping all 
+  214  ansible -m ping webservers
+  215  ansible -m ping webserver
+  216  ansible -m ping ansnode1
+  217  ansible -m ping all
+  218  ansible all --list-hosts
+  219  ansible-doc -l | more | wc -l
+  220  ansible webservers -i inventory -m yum -a "name=httpd state=present"
+  221  ll
+  222  cat hosts 
+  223  vi hosts 
+  224  ansible webservers -i inventory -m yum -a "name=httpd state=present"
+  225  ansible webservers 
+  226  touch cat 
+  227  ll
+  228  rm cat 
+  229  clear
+  230  init 0
+  231  rpm -ivh --last 
+  232  rpm -qa --last 
+  233  yum remove kubernetes
+  234  yum remove kubeadm
+  235  yum remove docker;
+  236  yum remove kubeadm; yum remove docker 
+  237  clear
+  238  yum remove docker*
+  239  yum install -y yum-utils
+  240  yum-config-manager
+  241  sudo yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+  242  sudo yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+  243  yum-config-manager 
+  244  sudo yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-engine
+  245  sudo yum remove docker \ 
+  246  yum remove docker \ 
+  247  yum install sudo
+  248  yum remove docker-client \
+  249  yum remove ansible*
+  250  sudo yum remove docker \ 
+  251  repolist
+  252  yum repolist
+  253  yum remove docker \ 
+  254  yum remove docker-client \
+  255  sudo yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-engine
+  256  cat /etc/sudoers.d/ansible 
+  257  cd /etc/sudoers.d/ 
+  258  ll
+  259  rm ansible 
+  260  sudo yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-engine
+  261  sudo yum install -y yum-utils 
+  262  sudo yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+  263  sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+  264  yum list docker-ce --showduplicates | sort -r
+  265  sudo systemctl start docker
+  266  systemctl status docker 
+  267  cd /etc/yum.repos.d/
+  268  ll
+  269  cat kubernetes.repo 
+  270  sudo setenforce 0
+  271  sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+  272  sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+  273  sudo systemctl enable --now kubelet
+  274  clear
+  275  swapoff -a 
+  276  systemctl stop firewalld
+  277  systemctl disable firewalld
+  278  iptables -F
+  279  cat /etc/sysctl.d/k8s.conf 
+  280  iptables -F
+  281  cat /proc/swaps
+  282  sysctl --system
+  283  cat /etc/yum.repos.d/kubernetes.repo
+  284  yum install kubeadm docker -y 
+  285  ##yum install kubeadm docker -y 
+  286  systemctl enable kubelet
+  287  systemctl enable docker
+  288  systemctl enable kubelet
+  289  systemctl start kubelet
+  290  kubeadm init --kubernetes-version=v1.25.0
+  291  cd /etc/kubernetes
+  292  ll
+  293  systemctl restart kubeadm
+  294  systemctl restart kubectl
+  295  systemctl status kubelet
+  296  systemctl stop kubelet
+  297  systemctl remove kubelet
+  298  yum remove -y kubelet kubeadm kubectl
+  299  systemctl status kubelet
+  300  systemctl disable kubelet
+  301  systemctl stop docker
+  302  yum remove docker*
+  303  yum remove -y kubelet kubeadm kubectlcd
+  304  cd
+  305  ll
+  306  ls -la
+  307  rm .kube
+  308  rm -rf .kube 
+  309  rm -rf .docker
+  310  ls -la
+  311  rm -rf .ansible
+  312  ls -la
+  313  clear
+  314  yum update -y
+  315  sudo yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-engine
+  316  sudo yum install -y yum-utils
+  317  sudo yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+  318  sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+  319  systemctl start docker
+  320  systemctl enable docker
+  321  sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes -y 
+  322  systemctl enable kubelet
+  323  systemctl start kubelet
+  324  kubeadm init --kubernetes-version=v1.25.0 
+  325  cd /etc/kubernetes
+  326  ll
+  327  rm -rf manifests/
+  328  kubeadm init --kubernetes-version=v1.25.0 
+  329  systemctl status containerd
+  330  systemctl restart containerd
+  331  ls /etc/containerd/config.toml 
+  332  rm /etc/containerd/config.toml 
+  333  systemctl restart containerd
+  334  systemctl enable containerd
+  335  kubeadm init --kubernetes-version=v1.25.0 
+  336   -tulpn|grep 10250 
+  337  yum install netstat
+  338  lsof -np
+  339  yum install lsof
+  340  lsof -np
+  341  lsof -np 10250
+  342  lsof -np 10250cd /var/lib
+  343  cd /var/lib
+  344  ll
+  345  lsof
+  346  lsof |grep 10250
+  347  lsof
+  348  lsof|head
+  349  lsof |grep 10250
+  350  kill -9 55019 
+  351  lsof |grep 10250
+  352  kubeadm init --kubernetes-version=v1.25.0 
+  353  ##> /var/lib/etcd 
+  354  cat /var/lib/etcd
+  355  cd /var/lib/etcd
+  356  ll
+  357  cd member/
+  358  ll
+  359  cd ..
+  360  ll
+  361  rm -rm member/
+  362  rm -rf member/
+  363  cd 
+  364  kubeadm init --kubernetes-version=v1.25.0 
+  365  lsof |grep 10250
+  366  kill -9 55239 
+  367  lsof |grep 10250
+  368  kubeadm init --kubernetes-version=v1.25.0 
+  369  mkdir -p $HOME/.kube 
+  370  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config 
+  371  sudo chown $(id -u):$(id -g) $HOME/.kube/config 
+  372  kubectl get-nodes
+  373  kubectl getnodes
+  374  kubectl get nodes
+  375  clear
+  376  kubectl get nodes
+  377  pwd
+  378  mkdir -p k8s/namespace
+  379  cd k8s/namespace/
+  380  vi ns_dev.yml
+  381  yum install yaml
+  382  cat yaml
+  383  cat ns_dev.yml 
+  384  vi ns_dev.yml 
+  385  kubectl apply -f ns_dev.yml 
+  386  vi ns_dev.yml 
+  387  kubectl apply -f ns_dev.yml 
+  388  ll
+  389  cat ns_dev.yml 
+  390  kubectl get -ns
+  391  kubectl get ns
+  392  kubectl get -n kube-public 
+  393  kubectl get pod kube-public 
+  394  kubectl get pod -n kube-public 
+  395  kubectl get pod -n kube-system
+  396  kubectl get pod -n kube-node-lease
+  397  ll
+  398  cd ll
+  399  cd ..
+  400  ll
+  401  mkdir pods
+  402  cd pods/
+  403  ll
+  404  vi pod1.yml
+  405  cat pod1.yml 
+  406  ll
+  407  pwd
+  408  cd ..
+  409  ll
+  410  kubectl apply -f pods/pod1.yml -n development 
+  411  vi pod1.yml
+  412  ll
+  413  cd pods/
+  414  ll
+  415  cat pod1.yml 
+  416  cat -n pod1.yml 
+  417  vi pod1.yml 
+  418  kubectl apply -f pods/pod1.yml -n development 
+  419  kubectl apply -f pod1.yml -n development 
+  420  vi pod1.yml 
+  421  clear
+  422  vi pod1.yml 
+  423  kubectl apply -f pod1.yml  -n development
+  424  cat -n pod1.yml 
+  425  vi pod1.yml 
+  426  cat pod1.yml 
+  427  kubectl apply -f pod1.yml  -n development
+  428  vi pod1.yml 
+  429  kubectl apply -f pod1.yml  -n development
+  430  cat pod1.yml 
+  431  vi pod1.yml 
+  432  kubectl apply -f pod1.yml  -n development
+  433  vi pod1.yml 
+  434  kubectl apply -f pod1.yml  -n development
+  435  kubectl get nodes -n development
+  436  kubectl get pods -n development
+  437  cat pod1.yml 
+  438  cd ..
+  439  ll
+  440  cd namespace/
+  441  ll
+  442  vi ns_qa.yml 
+  443  ll
+  444  kubectl apply -f ns_qa.yml 
+  445  kubectl get -ns
+  446  kubectl get ns
+  447  clear
+  448  cd ..
+  449  ll
+  450  cd pods/
+  451  ll
+  452  vi pod2-qa.yml
+  453  ll
+  454  kubectl apply -f pod2-qa.yml -n qa 
+  455  kubectl get pods
+  456  kubectl get pods --all
+  457  kubectl get pods -all
+  458  kubectl get pods all
+  459  kubectl get pods -a
+  460  kubectl get pods
+  461  kubectl get pods -n qa
+  462  kubectl get pods -n development
+  463  kubectl get pods --help
+  464  kubectl get pods --A
+  465  kubectl get pods -A
+  466  kubectl get pods --all-namespaces 
+  467  kubectl get pods --A
+  468  kubectl get pods -A
+  469  clear
+  470  cd ..
+  471  ll
+  472  cd pods/
+  473  ll
+  474  cd ../namespace/
+  475  ll
+  476  cd ..
+  477  ll
+  478  clear
+  479  ll
+  480  mkdir labels
+  481  cd labels/
+  482  ll
+  483  vi uat-linux.yml
+  484  ll
+  485  kubectl apply -f uat-linux.yml 
+  486  cat -n uat-linux.yml 
+  487  vi uat-linux.yml 
+  488  cat -n uat-linux.yml 
+  489  kubectl apply -f uat-linux.yml 
+  490  vi uat-linux.yml 
+  491  kubectl apply -f uat-linux.yml 
+  492  vi uat-linux.yml 
+  493  cat -n uat-linux.yml 
+  494  vi uat-linux.yml 
+  495  kubectl apply -f uat-linux.yml 
+  496  cat -n uat-linux.yml 
+  497  ll
+  498  cd ..
+  499  ll
+  500  kubectl get pods -l team=tcs
+  501  kubectl get pods -l tea
+  502  kubectl get pods -l team=tcs
+  503  kubectl get pods -l team=tcs -n qa 
+  504  docker ps 
+  505  docker ps -a
+  506  docker ps 
+  507  kubectl describe uat-pod4 
+  508  kubectl describe uat-pod4 -n qa
+  509  kubectl describe pods uat-pod4 -n qa
+  510  clear
+  511  kubectl describe --help
+  512  kubectl describe -f pods/pod1.yml 
+  513  kubectl get nodes -A
+  514  kubectl get pods -A
+  515  kubectl get pods -n qa
+  516  kubectl describe uat-pod4 -n qa
+  517  kubectl describe pods uat-pod4 
+  518  kubectl describe pods uat-pod4 -n qa
+  519  kubectl describe pods uat-pod4 
+  520  kubectl describe pods uat-pod4 -n qa
+  521  clear
+  522  kubectl get pods -n qa
+  523  kubectl describe pods uat-pod4 -n qa
+  524  kubectl top pod 
+  525  kubectl top pod pod3-qa -n qa
+  526  clear
+  527  ll
+  528  cd usagebased
+  529  mkdir usagebased
+  530  ll
+  531  cd usagebased/
+  532  ll
+  533  vi uat-pod6-mem.yml
+  534  ll
+  535  kubectl apply -f uat-pod6-mem.yml -n qa
+  536  vi uat-pod6-mem.yml
+  537  kubectl apply -f uat-pod6-mem.yml -n qa
+  538  vi uat-pod6-mem.yml
+  539  clear
+  540  vi uat-pod6-mem.yml
+  541  kubectl apply -f uat-pod6-mem.yml -n qa
+  542  cat -n uat-pod6-mem.yml 
+  543  vi uat-pod6-mem.yml 
+  544  kubectl apply -f uat-pod6-mem.yml -n qa
+  545  vi uat-pod6-mem.yml 
+  546  kubectl apply -f uat-pod6-mem.yml -n qa
+  547  vi uat-pod6-mem.yml 
+  548  kubectl apply -f uat-pod6-mem.yml -n qa
+  549  vi uat-pod6-mem.yml 
+  550  kubectl apply -f uat-pod6-mem.yml -n qa
+  551  clear
+  552  vi uat-pod6-mem.yml 
+  553  kubectl apply -f uat-pod6-mem.yml -n qa
+  554  vi uat-pod6-mem.yml 
+  555  kubectl apply -f uat-pod6-mem.yml -n qa
+  556  vi uat-pod6-mem.yml 
+  557  kubectl apply -f uat-pod6-mem.yml -n qa
+  558  vi uat-pod6-mem.yml 
+  559  kubectl apply -f uat-pod6-mem.yml -n qa
+  560  vi uat-pod6-mem.yml 
+  561  kubectl apply -f uat-pod6-mem.yml -n qa
+  562  clear
+  563  kubectl apply -f uat-pod6-mem.yml -n qa
+  564  clea
+  565  clear
+  566  ll
+  567  cd /etc/networks uat-pod6-mem.yml 
+  568  clear
+  569  hostname
+  570  ip a
+  571  clear
+  572  ll
+  573  kubectl apply -f uat-pod6-mem.yml  -n qa 
+  574  vi uat-pod6-mem.yml 
+  575  kubectl apply -f uat-pod6-mem.yml  -n qa 
+  576  vi uat-pod6-mem.yml 
+  577  kubectl apply -f uat-pod6-mem.yml  -n qa 
+  578  vi uat-pod6-mem.yml 
+  579  vi uat-pod7-mem.yml
+  580  kubectl apply -f uat-pod7-mem.yml -n qa 
+  581  ll
+  582  cat -n uat-pod7-mem.yml 
+  583  vi uat-pod7-mem.yml 
+  584  kubectl apply -f uat-pod7-mem.yml -n qa 
+  585  vi uat-pod7-mem.yml 
+  586  kubectl apply -f uat-pod7-mem.yml -n qa 
+  587  cat uat-pod7-mem.yml 
+  588  clear
+  589  ll
+  590  cd ..
+  591  ll
+  592  cd ll
+  593  ll
+  594  cd usagebased/
+  595  ll
+  596  rm uat-pod6-mem.yml 
+  597  clear
+  598  ll
+  599  cd ..
+  600  ll
+  601  mkdir repcontroller
+  602  ll
+  603  cd repcontroller/
+  604  ll
+  605  vi prod-repcon.yml
+  606  kubectl apply prod-repcon.yml -n qa
+  607  kubectl apply -f prod-repcon.yml -n qa
+  608  cat -n prod-repcon.yml 
+  609  vi prod-repcon.yml 
+  610  cat -n prod-repcon.yml 
+  611  kubectl apply -f prod-repcon.yml -n qa
+  612  cat -n prod-repcon.yml 
+  613  vi prod-repcon.yml 
+  614  kubectl apply -f prod-repcon.yml -n qa
+  615  vi prod-repcon.yml 
+  616  kubectl apply -f prod-repcon.yml -n qa
+  617  vi prod-repcon.yml 
+  618  kubectl apply -f prod-repcon.yml -n qa
+  619  cat -n prod-repcon.yml 
+  620  kubectl get nodes
+  621  kubectl get nodes -o wide 
+  622  kubectl get pods
+  623  kubectl get pods qa
+  624  kubectl get pods -n qa
+  625  kubectl get pods -n prod
+  626  kubectl get pods -n development
+  627  kubectl get pods -o wide
+  628  kubectl get pods -o wide -n qa
+  629  clear
+  630  kubectl get pods -o wide -n qa
+  631  kubectl run def-pod --image nginx:latest --generator=run-pod/v1 
+  632  kubectl --help
+  633  kubectl run def-pod --image nginx:latest 
+  634  kubectl get pods 
+  635  kubectl get pods -A
+  636  kubectl get -ns
+  637  kubectl get ns
+  638  kubectl get pods def-pod -o yaml 
+  639  kubectl describe pod def-pod 
+  640  ll
+  641  pwd
+  642  curl https://docs.projectcalico.org/manifests/calico.yaml -O 
+  643  ll
+  644  kubectl create -f calico.yaml 
+  645  kubectl get pods 
+  646  kubectl get pods -n kubesystem
+  647  kubectl get pods -n kube-system
+  648  calico-kube-controllers-7bdf4bf59d-w42k8     0/1     ContainerCreating   0             53s
+  649  calico-node-nzt5d                            0/1     Init:0/3            0             53s
+  650  calico-node-xpkzp                            0/1     Init:2/3            0             53s
+  651  calico-node-xv76s                            0/1     Init:0/3            0             53s
+  652  kubectl get ns
+  653  kubectl delete 
+  654  kubectl get pods -A
+  655  kubectl delete uat-pod4 
+  656  kubectl delete pod uat-pod4 
+  657  kubectl delete pod uat-pod4 -n qa
+  658  kubectl get pods -A|grep uat-pod4 
+  659  kubectl get pods -A
+  660  clear
+  661  kubectl expose pod uat-pod5 --type=NodePort --name=myservice
+  662  kubectl expose pod uat-pod5 --type=NodePort --name=myservice -n qa
+  663  kubectl get svc
+  664  kubectl get nodes -o wide
+  665  kubectl expose pod pod3-qa --type=NodePort --port=80 --name=2service
+  666  kubectl expose pod pod3-qa --type=NodePort --port=80 --name=2service -n qa
+  667  kubectl expose pod pod3-qa --type=NodePort --port=80 --name=secservice -n qa
+  668  kubectl expose pod pod7-uat-mem --type=NodePort --port=80 --name=2service -n qa
+  669  kubectl expose pod pod7-uat-mem --type=NodePort --port=80 --name=secservice -n qa
+  670  kubectl get svc
+  671  kubectl get pods pod7-uat-mem -o wide
+  672  kubectl get pods pod7-uat-mem -o wide -n qa
+  673  kubectl get pods pod7-uat-mem -o wide -n qa 
+  674  ip a
+  675  clear
+  676  kubectl get nodes
+  677  kubectl get po
+  678  kubectl get pods
+  679  clear
+  680  kubectl get pods
+  681  kubectl get pods -A
+  682  kubectl get pods -n qa
+  683  kubectl get pods -n development
+  684  kubectl start pod7-uat-mem 
+  685  kubectl expose pod uat-pod5 --type=NodePort --port=81 --target-port=80 --name mynewserv
+  686  kubectl expose pod uat-pod5 --type=NodePort --port=81 --target-port=80 --name mynew -n qa
+  687  clear
+  688  cd /etc/sysconfig/network-scripts/
+  689  ll
+  690  cat ifcfg-ens33 
+  691  cat ifcfg-ens36
+  692  ip a
+  693  pwd
+  694  history|grep join
+  695  clear
+  696  kubectl ger src 
+  697  kubectl get svc
+  698  kubectl get svc -n qa
+  699  kubectl get pods
+  700  kubectl get pods -n qa
+  701  kubectl get pods -n qa -A
+  702  kubectl get svc -n qa -O wide
+  703  kubectl get svc -n qa -o  wide
+  704  kubectl get pods 
+  705  kubectl get pods -n qa
+  706  kubectl logs pod3-qa 
+  707  kubectl logs pod3-qa -n qa
+  708  kubectl exec -it pod3-qa -- sh 
+  709  kubectl exec -it pod3-qa -- sh -n qa
+  710  kubectl exec -it pod3-qa -- /bin/bash -n qa
+  711  kubectl get nods
+  712  kubectl get nodes
+  713  kubectl get pods pod3-qa -o wide
+  714  kubectl get pod3-qa -n qa -o wide
+  715  kubectl get pod3-qa -o wide -n qa
+  716  kubectl get pods 
+  717  kubectl get pods -n qa
+  718  kubectl get pods -n qa -o wide
+  719  # Create  a Pod
+  720  kubectl run <desired-pod-name> --image <Container-Image> --generator=run-pod/v1
+  721  kubectl run my-first-pod --image stacksimplify/kubenginx:1.0.0 --generator=run-pod/v1
+  722  # Expose Pod as a Service
+  723  kubectl expose pod <Pod-Name>  --type=NodePort --port=80 --name=<Service-Name>
+  724  kubectl expose pod my-first-pod  --type=NodePort --port=80 --name=my-first-service
+  725  # Get Service Info
+  726  kubectl get service
+  727  kubectl get svc
+  728  # Get Public IP of Worker Nodes
+  729  kubectl get nodes -o wide
+  730  clear
+  731  # Create  a Pod
+  732  kubectl run <desired-pod-name> --image <Container-Image> --generator=run-pod/v1
+  733  kubectl run my-first-pod --image stacksimplify/kubenginx:1.0.0 --generator=run-pod/v1
+  734  # Expose Pod as a Service
+  735  kubectl expose pod <Pod-Name>  --type=NodePort --port=80 --name=<Service-Name>
+  736  kubectl expose pod my-first-pod  --type=NodePort --port=80 --name=my-first-service
+  737  # Get Service Info
+  738  kubectl get service
+  739  kubectl get svc
+  740  # Get Public IP of Worker Nodes
+  741  kubectl get nodes -o wide
+  742  clear
+  743  kubectl run my-first-pod --image stacksimplify/kubenginx:1.0.0 --generator=run-pod/v1 
+  744  kubectl run my-first-pod --image stacksimplify/kubenginx:1.0.0
+  745  kubectl get pods
+  746  kubectl expose pod my-first-pod  --type=NodePort --port=81 --target-port=80 --name=my-first-service3
+  747  kubectl get svc
+  748  kubectl get pods 
+  749  kubectl delete my-first-pod 
+  750  kubectl delete pod my-first-pod 
+  751  kubectl get pods 
+  752  clear
+  753  kubectl get pods
+  754  kubectl get pods -A
+  755  kubectl exec -it my-first-pod -- /bin/bash
+  756  kubectl run my-first-pod --image stacksimplify/kubenginx:1.0.0 
+  757  kubectl get pods
+  758  kubectl exec -it my-first-pod -- /bin/bash 
+  759  kubectl get pods
+  760  kubectl get pods -A
+  761  init 0
+  762  kubectl get nodes
+  763  kubectl get nodes -A
+  764  kubectl get pods -A
+  765  kubectl get nodes
+  766  clear
+  767  ll
+  768  kubectl get ns
+  769  ll
+  770  cd awscli-bundle
+  771  ll
+  772  cd ..
+  773  df -h
+  774  cleae
+  775  clear
+  776  ll
+  777  cd
+  778  ll
+  779  cd /root/
+  780  ll
+  781  cd k8s/
+  782  ll
+  783  mkdir replicaset
+  784  cd replicaset/
+  785  ll
+  786  vi repset.yaml
+  787  kubectl -f repset.yaml 
+  788  kubectl apply -f repset.yaml 
+  789  kubectl apply -f repset.yaml -n qa
+  790  ll
+  791  cat repset.yaml 
+  792  kubectl apply -f repset.yaml -n qa
+  793  vi repset.yaml 
+  794  kubectl apply -f repset.yaml -n qa
+  795  vi repset.yaml 
+  796  kubectl apply -f repset.yaml -n qa
+  797  vi repset.yaml 
+  798  kubectl apply -f repset.yaml -n qa
+  799  vi repset.yaml 
+  800  kubectl apply -f repset.yaml -n qa
+  801  kubectl get pods -n qa
+  802  kubectl delete pod pod-repset-8d7dc -n qa
+  803  kubectl get pods -n qa
+  804  kubectl get pods -n qa|grep repset
+  805  kubectl get pods -n qa|grep repset|wc
+  806  clear 
+  807  ll
+  808  cd ..
+  809  ll
+  810  mkdir annotation
+  811  cd annotation/
+  812  vi annot.yaml
+  813  kubectl apply -f annot.yaml -n qa
+  814  kubectl apply -f annot.yaml 
+  815  vi annot.yaml 
+  816  kubectl apply -f annot.yaml 
+  817  kubectl get pods
+  818  kubectl get pods -A
+  819  ll
+  820  cd ..
+  821  ll
+  822  cd replicaset/
+  823  ll
+  824  vi repset.yaml 
+  825  kubectl apply -f repset.yaml -n qa
+  826  pwd
+  827  ll
+  828  kubectl apply -f repset.yaml
+  829  kubectl apply -f repset.yaml -a qa
+  830  kubectl apply -f repset.yaml -n qa
+  831  kubectl get pods -A
+  832  kubectl apply -f repset.yaml -n qa 
+  833  ll
+  834  cat repset.yaml 
+  835  vi repset.yaml 
+  836  kubectl apply -f repset.yaml -n qa 
+  837  kubectl get pods -A
+  838  clear
+  839  #kubectl label nodes hostname name=new_nodename 
+  840  kubectl get nodes
+  841  kubectl get nodes -o wide
+  842  kubectl label nodes k8sworker1.vsys.net name=node3 
+  843  ll
+  844  cd ..
+  845  ll
+  846  cd nodeselec
+  847  mkdir nodeselec
+  848  cd nodeselec/
+  849  vi node.yml
+  850  vi node.yml 
+  851  kubectl apply -f node.yml 
+  852  ll
+  853  kubectl get nodes -A -o wide
+  854  kubectl get pods -o wide
+  855  kubectl get pods -o wide -A
+  856  init 0 
+  857  systemctl status docker
+  858  yum install docker 
+  859  yum install docker* 
+  860  yum remove docker* 
+  861  yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-engine
+  862  yum install -y yum-utils 
+  863  yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+  864  yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin 
+  865  yum list docker-ce --showduplicates | sort -r
+  866  systemctl start docker
+  867  systemctl enable docker
+  868  docker --version
+  869  docker -v
+  870  docker v
+  871  docker version
+  872  docker info
+  873  docker --help
+  874  docker system events 
+  875  docker images
+  876  docker images -A
+  877  docker images 
+  878  docker search httpd
+  879  docker search httpd:latest
+  880  docker search httpd:new
+  881  docker search httpd1
+  882  docker ps
+  883  docker run name cont1 httpd:latest
+  884  docker run cont1 httpd:latest
+  885  docker run cont1 httpd
+  886  docker run -n cont1 httpd
+  887  docker --help
+  888  docker run cont1 httpd
+  889  docker run -d cont1 httpd
+  890  docker run -d --name cont1 httpd
+  891  docker ps
+  892  docker --help|grep create
+  893  docker create -d --name cont2 httpd
+  894  docker create --name cont2 httpd
+  895  docker ps
+  896  docker ps --all
+  897  docker start 0886220b0787 
+  898  docker ps --all
+  899  docker exec -it cont1 sh
+  900  docker exec -it cont1 /bin/bash
+  901  docker exec -it cont1 hostname
+  902  docker exec -it cont1 mkdir /root/dir1
+  903  docker exec -it cont1 /bin/bash
+  904  ll
+  905  docker cp calico.yaml 9e0981c19f93:/tmp/
+  906  docker exec -it cont1 /bin/bash
+  907  clear]
+  908  clear
+  909  docker ps
+  910  docker ps --all
+  911  docker ps --A
+  912  docker ps -A
+  913  docker ps --all
+  914  docker pa
+  915  docker pas
+  916  docker ps
+  917  docker exec -it -d 0886220b0787nt2 /bin/bash
+  918  docker ps
+  919  docker exec -it -d cont1 /bin/bash
+  920  docker exec -it  cont1 /bin/bash
+  921  docker exec -it cont2 /bin/bash
+  922  docker ps -a
+  923  docker stop cont1
+  924  docker ps -a
+  925  docker ps 
+  926  docker stop cont2
+  927  docker ps 
+  928  docker stats
+  929  docker start cont2
+  930  docker start cont1
+  931  docker stats
+  932  docker stats -9
+  933  docker stats cont1
+  934  docker stats cont2
+  935  docker ps 
+  936  docker rm 0886220b0787
+  937  docker stop 0886220b0787
+  938  docker rm 0886220b0787
+  939  docker images
+  940  docker rmi httpd
+  941  docker stop 9e0981c19f93 
+  942  docker rmi httpd
+  943  docker rm 9e0981c19f93 
+  944  docker rmi httpd
+  945  clear
+  946  docker images
+  947  docker images -A
+  948  docker images --all
+  949  docker images 
+  950  docker ps --all
+  951  docker run -it -d --name cont1 httpd:latest 
+  952  docker run -it -d --name cont2 httpd:latest 
+  953  docker run -it -d --name cont3 httpd:latest 
+  954  clear
+  955  docker ps 
+  956  docker logs cont1
+  957  docker logs cont2
+  958  docker logs cont3
+  959  ip a
+  960  ip a|grep dock
+  961  clear
+  962  docker run -p 80:801/tcp cont4 httpd
+  963  docker run -it -p 80:801/tcp cont4 httpd
+  964  docker run -it -d --name cont4  -p 80:801/tcp httpd
+  965  docker ps -a
+  966  clear
+  967  docker ps -a
+  968  ip a
+  969  iptables -L
+  970  iptables -F
+  971  systemctl status firewalld
+  972  systemctl status httpd
+  973  systemctl start httpd
+  974  clear
+  975  ip a
+  976  clear
+  977  docker ps
+  978  docker run -itd --name webcont -p 90:80/tcp httpd:latest 
+  979  dockeer ps 
+  980  docker ps 
+  981  ip a
+  982  iptables -L
+  983  iptables -F
+  984  iptables -L
+  985  sestatus
+  986  clear
+  987  docker run -itd --name webc -p 81:80 nginx
+  988  docker ps
+  989  ip a
+  990  docker ps 
+  991  docker ps
+  992  docker ps -qa
+  993  docker stop $(docker ps -qa)
+  994  docker ps -qa
+  995  docker ps 
+  996  docker
+  997  dockerps 
+  998  docker ps 
+  999  clear
+ 1000  init 0 
+ 1001  kubectl get nodes 
+ 1002  kubectl get nodes kubectl get nodes
+ 1003  kubectl get nodes
+ 1004  clear
+ 1005  history
+ 1006  history > dockernotes.txt
